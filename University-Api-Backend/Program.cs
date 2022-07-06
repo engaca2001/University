@@ -24,7 +24,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<IStudentService,StudentService>();  // inyectamos para poder user en los controladores
 //TODO: add the rest of the services
-
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using University_Api_Backend.DataAccess;
 using University_Api_Backend.Models.DataModels;
+using University_Api_Backend.Services;
 
 namespace University_Api_Backend.Controllers
 {
@@ -16,9 +17,12 @@ namespace University_Api_Backend.Controllers
     {
         private readonly UniversityDBContext _context;
 
-        public CategoriesController(UniversityDBContext context)
+        private readonly ICategoryService _categoryService;
+
+        public CategoriesController(UniversityDBContext context, ICategoryService categoryService)
         {
             _context = context;
+            _categoryService = categoryService;
         }
 
         // GET: api/Categories
