@@ -1,7 +1,8 @@
 ﻿namespace University_Api_Backend.Models.DataModels
 {
     public class JwtSettings
-    {
+    {// se puede emplear en cualquier proyecto
+
         public bool ValidateIssuerSigningKey { get; set; } // para comprobar la firma de nuestro usuario
         public string IssuerSigningKey { get; set; } = string.Empty;
 
